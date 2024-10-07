@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MSKTask"
         tools:targetApi="31" >
         <activity
-            android:name=".ui.event.jetpackcompose.EventsAndResultsActivity"
+            android:name=".ui.event.jetpackcompose.EventsAndResultsJPCActivity"
             android:exported="false" />
 
         <activity

@@ -25,7 +25,7 @@ import com.msktask.ui.model.MSKDataUI
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class EventsAndResultsActivity : ComponentActivity() {
+class EventsAndResultsJPCActivity : ComponentActivity() {
 
     private val eventViewModel: EventViewModel by viewModels()
 
@@ -97,7 +97,7 @@ class EventsAndResultsActivity : ComponentActivity() {
 
     companion object {
         fun getInstance(activity: Activity): Intent {
-            val intent = Intent(activity, EventsAndResultsActivity::class.java)
+            val intent = Intent(activity, EventsAndResultsJPCActivity::class.java)
             return intent
         }
     }

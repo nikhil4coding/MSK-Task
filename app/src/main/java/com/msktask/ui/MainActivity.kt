@@ -15,7 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.msktask.ui.event.jetpackcompose.EventsAndResultsActivity
+import com.msktask.ui.event.jetpackcompose.EventsAndResultsJPCActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     onXmlClicked = {
                     },
                     onJPComposeClicked = {
-                        val intent = EventsAndResultsActivity.getInstance(this)
+                        val intent = EventsAndResultsJPCActivity.getInstance(this)
                         this.startActivity(intent)
                     }
                 )

@@ -6,6 +6,7 @@ compose = "1.0.0-beta01"
 converterGson = "2.9.0"
 coreTesting = "2.2.0"
 foundation = "1.7.1"
+fragmentKtx = "1.8.4"
 gson = "2.10.1"
 hiltAndroidVersion = "2.51.1"
 kotlin = "1.9.0"
@@ -39,6 +40,7 @@ androidx-annotation = { module = "androidx.annotation:annotation", version.ref =
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "runtimeLivedata" }

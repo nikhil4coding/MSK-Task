@@ -1,4 +1,4 @@
-package com.msktask.ui.event.jetpackcompose
+package com.msktask.ui.jetpackcompose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,7 +45,7 @@ fun ResultListView(
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        text = "Result List",
+                        text = stringResource(id = R.string.result_list_header),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -55,7 +56,7 @@ fun ResultListView(
                     }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back button"
+                            contentDescription = stringResource(id = R.string.back_button)
                         )
                     }
                 }
@@ -82,7 +83,7 @@ fun ResultListView(
                     .padding(paddingValues)
             ) {
                 items(resultList) { item ->
-                    //Event Name
+
                     Column(
                         modifier = Modifier
                             .wrapContentHeight()
@@ -94,7 +95,7 @@ fun ResultListView(
                     ) {
                         //id
                         Text(
-                            text = item.id,
+                            text = stringResource(id = R.string.result_id, item.id),
                             modifier = Modifier
                                 .wrapContentSize(),
                             fontSize = 22.sp,
@@ -105,7 +106,7 @@ fun ResultListView(
                         )
                         //description
                         Text(
-                            text = item.desc,
+                            text = stringResource(id = R.string.description, item.desc),
                             modifier = Modifier
                                 .wrapContentSize(),
                             fontSize = 14.sp,

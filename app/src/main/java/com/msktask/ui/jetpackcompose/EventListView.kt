@@ -1,4 +1,4 @@
-package com.msktask.ui.event.jetpackcompose
+package com.msktask.ui.jetpackcompose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,7 +45,7 @@ fun EventListView(
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        text = "Event List",
+                        text = stringResource(id = R.string.event_list_header),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -55,7 +56,7 @@ fun EventListView(
                     }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back button"
+                            contentDescription = stringResource(R.string.back_button)
                         )
                     }
                 }
@@ -94,22 +95,20 @@ fun EventListView(
                     ) {
                         //id
                         Text(
-                            text = item.id,
+                            text = stringResource(id = R.string.event_id, item.id),
                             modifier = Modifier
                                 .wrapContentSize(),
                             fontSize = 22.sp,
-                            lineHeight = 28.sp,
                             color = colorResource(id = R.color.black),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
                         //description
                         Text(
-                            text = item.desc,
+                            text = stringResource(id = R.string.description, item.desc),
                             modifier = Modifier
                                 .wrapContentSize(),
                             fontSize = 14.sp,
-                            lineHeight = 20.sp,
                             color = colorResource(id = R.color.black),
                             maxLines = 4,
                             overflow = TextOverflow.Ellipsis

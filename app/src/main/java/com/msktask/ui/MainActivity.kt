@@ -14,8 +14,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.msktask.ui.event.jetpackcompose.EventsAndResultsJPCActivity
+import androidx.compose.ui.unit.sp
+import com.msktask.R
+import com.msktask.ui.jetpackcompose.EventsAndResultsJPCActivity
+import com.msktask.ui.oldxml.EventsAndResultsXMLActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,6 +31,8 @@ class MainActivity : ComponentActivity() {
             MaterialTheme {
                 MainView(
                     onXmlClicked = {
+                        val intent = EventsAndResultsXMLActivity.getInstance(this)
+                        this.startActivity(intent)
                     },
                     onJPComposeClicked = {
                         val intent = EventsAndResultsJPCActivity.getInstance(this)
@@ -47,20 +53,28 @@ fun MainView(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        verticalArrangement = Arrangement.SpaceEvenly
+        verticalArrangement = Arrangement.Center
     ) {
 
         Button(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 30.dp),
             onClick = { onXmlClicked() }) {
-            Text("Xml Layout")
+            Text(
+                fontSize = 24.sp,
+                text = stringResource(R.string.xml_layout_btn)
+            )
         }
 
 
         Button(
             modifier = Modifier.fillMaxWidth(),
             onClick = { onJPComposeClicked() }) {
-            Text("Jetpack Compose Layout")
+            Text(
+                fontSize = 24.sp,
+                text = stringResource(R.string.jetpack_compose_layout_btn)
+            )
         }
 
     }

@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">MSK Task</string>
     <string name="error">Error: %1$s</string>
+    <string name="event_list_header">Event List</string>
+    <string name="back_button">Back button</string>
+    <string name="result_list_header">Result List</string>
+    <string name="xml_layout_btn">Xml Layout</string>
+    <string name="jetpack_compose_layout_btn">Jetpack Compose Layout</string>
+    <string name="event_id">Event Id: %1$s</string>
+    <string name="result_id">Result Id: %1$s</string>
+    <string name="description">Description:  %1$s</string>
 </resources>

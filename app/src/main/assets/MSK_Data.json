@@ -1,0 +1,39 @@
+[
+  {
+    "id": "8ZbP7-6ZZMrejBMr-bMZp",
+    "desc": "First event",
+    "sync": "true",
+    "results": [
+      {
+        "id": "71bd9384879a44ae9cbe0c71a79a669d",
+        "desc": "First result in first event",
+        "type": "AUTO",
+        "value": 102
+      },
+      {
+        "id": "6833ca15b79a44ae9cbe0c71a79a669d",
+        "desc": "Second result in first event",
+        "type": "MANUAL",
+        "value": 36533
+      }
+    ]
+  },
+  {
+    "id": "6ZZMrejBMr-bMZp302846a15b",
+    "desc": "Second event",
+    "validity": 31,
+    "results": [
+      {
+        "id": "8b9bc31f960d4ce384302846833ca15b",
+        "desc": "First result in Second event",
+        "type": "MANUAL"
+      },
+      {
+        "id": "4302846833ca15b8b9bc31f960d4ce38",
+        "desc": "Second result in Second event",
+        "type": "MANUAL",
+        "value": 2024
+      }
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MSK Task</string>
+    <string name="error">Error: %1$s</string>
+</resources>

@@ -30,6 +30,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.msktask.R
+import com.msktask.ui.model.ResultTypeUI
 import com.msktask.ui.model.ResultsUI
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -82,7 +83,9 @@ fun ResultListView(
                 modifier = Modifier
                     .padding(paddingValues)
             ) {
-                items(resultList) { item ->
+                items(resultList.filter {
+                    it.type == ResultTypeUI.MANUAL
+                }) { item ->
 
                     Column(
                         modifier = Modifier

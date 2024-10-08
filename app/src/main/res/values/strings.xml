@@ -9,4 +9,7 @@
     <string name="event_id">Event Id: %1$s</string>
     <string name="result_id">Result Id: %1$s</string>
     <string name="description">Description:  %1$s</string>
+    <string name="ends_never_validity">Ends: never</string>
+    <string name="ends_in_secs_validity">Ends in %1$d secs</string>
+    <string name="ended_validity">Ended</string>
 </resources>

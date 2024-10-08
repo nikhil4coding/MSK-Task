@@ -22,11 +22,21 @@ data class MSKDataUI(
                     ResultsUI(
                         id = it.id,
                         desc = it.desc,
-                        type = it.type,
+                        type = toTypeUI(it.type),
                         value = it.value
                     )
                 }
             )
+        }
+
+        private fun toTypeUI(type: String): ResultTypeUI {
+            return when (type) {
+                "AUTO" -> ResultTypeUI.AUTO
+                "MANUAL" -> ResultTypeUI.MANUAL
+                else -> {
+                    ResultTypeUI.ERROR
+                }
+            }
         }
     }
 }
@@ -34,6 +44,12 @@ data class MSKDataUI(
 data class ResultsUI(
     val id: String,
     val desc: String,
-    val type: String,
+    val type: ResultTypeUI,
     val value: Int?
 )
+
+enum class ResultTypeUI {
+    AUTO,
+    MANUAL,
+    ERROR
+}
